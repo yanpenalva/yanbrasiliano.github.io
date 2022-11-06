@@ -12,22 +12,22 @@ export default {
 				{
 					id: 1,
 					title: 'Ramiro Campelo',
-					img: '/src/assets/images/brands/ramiro_logo.png',
+					img: new URL('@/src/assets/images/brands/ramiro_logo.png', import.meta.url),
 				},
 				{
 					id: 2,
 					title: 'ACP Group',
-					img: '/src/assets/images/brands/acp_logo.png',
+					img: new URL('@/assets/images/brands/acp_logo.png', import.meta.url),
 				},
 				{
 					id: 3,
 					title: 'Qintess',
-					img: '/src/assets/images/brands/qintess_logo.png',
+					img: new URL('@/assets/images/brands/qintess_logo.png', import.meta.url),
 				},
 				{
 					id: 5,
 					title: 'Prodeb',
-					img: '/src/assets/images/brands/prodeb_logo.png',
+					img: new URL('@/src/assets/images/brands/prodeb_logo.png', import.meta.url),
 				},
 
 			],
