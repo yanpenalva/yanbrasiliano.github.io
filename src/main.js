@@ -6,10 +6,10 @@ import "./assets/css/app.css";
 const feather = "feather-icons";
 feather.replace();
 
-createApp(App).use(router).mount("#app");
+const app = createApp(App);
+app.use(router).mount("#app");
 
 const appTheme = localStorage.getItem("theme");
-
 if (
   appTheme === "dark" &&
   document.querySelector("body").classList.contains("app-theme")
