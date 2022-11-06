@@ -17,13 +17,13 @@ My Personal Portfólio =)
 1. ##### Clone the repo:
 
 ```
-git clone 
+git clone git@github.com:yanbrasiliano/yanbrasiliano.github.io.git
 ```
 
 3. ##### Open the project folder:
 
 ```
-cd 
+cd /yanbrasiliano.github.io
 ```
 
 4. ##### Install packages and dependencies:
