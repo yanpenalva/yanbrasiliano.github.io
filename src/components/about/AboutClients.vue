@@ -12,7 +12,7 @@ export default {
 				{
 					id: 1,
 					title: 'Ramiro Campelo',
-					img: new URL('@/src/assets/images/brands/ramiro_logo.png', import.meta.url),
+					img: new URL('@/assets/images/brands/ramiro_logo.png', import.meta.url),
 				},
 				{
 					id: 2,
@@ -27,7 +27,7 @@ export default {
 				{
 					id: 5,
 					title: 'Prodeb',
-					img: new URL('@/src/assets/images/brands/prodeb_logo.png', import.meta.url),
+					img: new URL('@/assets/images/brands/prodeb_logo.png', import.meta.url),
 				},
 
 			],
