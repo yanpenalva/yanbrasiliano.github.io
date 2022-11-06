@@ -1,6 +1,6 @@
 # Portfólio Yan Penalva
 
-My Personal Portfólio =)
+My Personal Page 😊
 
 ## Features
 
