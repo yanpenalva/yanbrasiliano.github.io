@@ -23,7 +23,7 @@ git clone
 3. ##### Open the project folder:
 
 ```
-cd portfolio
+cd 
 ```
 
 4. ##### Install packages and dependencies:
