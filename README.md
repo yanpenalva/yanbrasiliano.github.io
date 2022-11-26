@@ -12,7 +12,7 @@ My Personal Page 😊
 -   Bundler Vite.js   
 
 
-## Want to try it out or change it for yourself? Follow the commands below:
+### Want to try it out or change it for yourself? Follow the commands below:
 
 1. ##### Clone the repo:
 
