@@ -44,9 +44,19 @@ const projects = [
     id: 6,
     title: "Blog PHP",
     category: "Web Application",
-    description: "Responsive scope for a technology-themed news blog. Stack: PHP + HTML + CSS.",
+    description:
+      "Responsive scope for a technology-themed news blog. Stack: PHP + HTML + CSS.",
     href: "https://github.com/yanbrasiliano/code-blog-personal",
     img: new URL("@/assets/images/cms-blog.png", import.meta.url),
+  },
+  {
+    id: 7,
+    title: "Daily Notes",
+    category: "Web Application",
+    description:
+      "Web app similar to google keep and with its functions made with Javascript.",
+    href: "https://github.com/yanbrasiliano/daily-notes-web-app",
+    img: new URL("@/assets/images/dailynotes.png", import.meta.url),
   },
 ];
 
