@@ -6,12 +6,12 @@ export default {
 				{
 					id: 1,
 					bio:
-						'Hi, I am Yan and I have been working with development for 2 years. Ex-Military Marine Corps, passionate about technology and challenges! In my spare time, I like to read, write and play sports. ',
+						'',
 				},
 				{
 					id: 2,
 					bio:
-						'Currently I work as Developer II for Qintess, based at PRODEB,an organization that assures the Bahia State Government the domain in the application of development solutions. My current work stack is: PHP, Laravel, Javascript and Vue.js. But I also have experience with Python, Shell Script and GNU/Linux Systems Administration.'
+						'As a Software Engineer, I have the skills to work through the entire system life cycle, with experience in maintaining systems in production, building new projects, requirements gathering, technical documentation, and version control. I have technical proficiency in English and am looking to improve by 1% every day! With my problem solving skills and critical thinking for solutions, along with my experience in various tools, technologies, and methodologies, I am able to provide high quality software solutions.'
 				},
 			],
 		};

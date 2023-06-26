@@ -19,11 +19,16 @@ export default {
 					name: 'yanpenabr@gmail.com',
 					icon: 'mail',
 				},
-				{
-					id: 3,
-					name: '+55 71 99243-2603',
-					icon: 'phone',
-				},
+        {
+          id: 3,
+          name: 'yanbrasiliano',
+          icon: 'github',
+        },
+        {
+          id: 4,
+          name: 'yanbrasiliano',
+          icon: 'linkedin',
+        },
 			],
 		};
 	},
