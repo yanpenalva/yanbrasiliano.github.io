@@ -1,11 +1,11 @@
 const projects = [
   {
     id: 1,
-    title: "Mini Framework PHP",
+    title: "PHPenalva",
     category: "API Application",
-    description: "A php-based mini framework with the main uses in the market.",
-    href: "https://github.com/yanbrasiliano/mini-framework-php",
-    img: new URL("@/assets/images/mini-framework.jpg", import.meta.url),
+    description: "A micro-framework for PHP with MVC pattern and REST API.",
+    href: "https://github.com/yanbrasiliano/phpenalva",
+    img: new URL("@/assets/images/phpenalva.png", import.meta.url),
   },
   {
     id: 2,
@@ -57,6 +57,15 @@ const projects = [
       "Web app similar to google keep and with its functions made with Javascript.",
     href: "https://github.com/yanbrasiliano/daily-notes-web-app",
     img: new URL("@/assets/images/dailynotes.png", import.meta.url),
+  },
+
+  {
+    id: 8,
+    title: "PHPenalva URL Shortener",
+    category: "Web Application",
+    description: "A sleek, efficient URL shortening tool built with the PHPenalva microframework.",
+    href: "https://github.com/yanbrasiliano/phpenalva-url-shortener",
+    img: new URL("@/assets/images/url-shortener.png", import.meta.url),
   },
 ];
 
