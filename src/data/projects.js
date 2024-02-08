@@ -65,7 +65,7 @@ const projects = [
     category: "Web Application",
     description: "A sleek, efficient URL shortening tool built with the PHPenalva microframework.",
     href: "https://github.com/yanbrasiliano/phpenalva-url-shortener",
-    img: new URL("@/assets/images/url-shortener.png", import.meta.url),
+    img: new URL("@/assets/images/shortener.png", import.meta.url),
   },
 ];
 
