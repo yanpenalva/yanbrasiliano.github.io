@@ -1,20 +1,24 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
 import "./assets/css/app.css";
+import router from "./router";
 
-const feather = "feather-icons";
+import feather from "feather-icons";
 feather.replace();
 
 const app = createApp(App);
 app.use(router).mount("#app");
 
+const body = document.querySelector("body");
 const appTheme = localStorage.getItem("theme");
-if (
-  appTheme === "dark" &&
-  document.querySelector("body").classList.contains("app-theme")
-) {
-  document.querySelector("body").classList.add("bg-primary-dark");
-} else {
-  document.querySelector("body").classList.add("bg-secondary-light");
-}
+
+const applyThemeClass = () => {
+    if (appTheme === "dark" && body?.classList.contains("app-theme")) {
+        body.classList.add("bg-primary-dark");
+        return;
+    }
+
+    body?.classList.add("bg-secondary-light");
+};
+
+applyThemeClass();
