@@ -1,6 +1,6 @@
 <script>
+import FooterCopyright from "@/components/shared/FooterCopyright.vue";
 import feather from "feather-icons";
-import FooterCopyright from "./FooterCopyright.vue";
 export default {
     components: { FooterCopyright },
     data() {

@@ -1,8 +1,8 @@
 <script>
 import feather from "feather-icons";
-import Button from "../reusable/Button.vue";
-import ThemeSwitcher from "../ThemeSwitcher";
-import AppHeaderLinks from "./AppHeaderLinks.vue";
+import Button from "@/components/reusable/Button.vue";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import AppHeaderLinks from "@/components/shared/AppHeaderLinks.vue";
 
 export default {
     components: {

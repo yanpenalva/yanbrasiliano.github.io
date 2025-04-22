@@ -1,5 +1,5 @@
 <script>
-import AboutClientSingle from "./AboutClientSingle.vue";
+import AboutClientSingle from "@/components/about/AboutClientSingle.vue";
 
 export default {
     components: {

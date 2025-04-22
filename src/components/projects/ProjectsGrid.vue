@@ -31,10 +31,10 @@ onMounted(() => feather.replace());
 <template>
     <section class="text-center mt-10">
         <a
-            href="https://github.com/yanbrasiliano"
+            href="https://github.com/yanpenalva"
             class="font-general-medium text-md sm:text-xl text-primary-dark dark:text-ternary-light"
         >
-            More projects: <span class="font-semibold">GitHub Yan Brasiliano</span>
+            More projects: <span class="font-semibold">GitHub Yan Penalva</span>
         </a>
     </section>
 
