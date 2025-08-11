@@ -1,6 +1,5 @@
 <script>
 import ContactDetails from "@/components/contact/ContactDetails.vue";
-import feather from "feather-icons";
 
 export default {
     name: "ContactPage",
@@ -33,13 +32,6 @@ export default {
             ],
         };
     },
-    mounted() {
-        feather.replace();
-    },
-    updated() {
-        feather.replace();
-    },
-    methods: {},
 };
 </script>
 

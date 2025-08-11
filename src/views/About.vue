@@ -1,44 +1,36 @@
 <script>
-import AboutMe from '@/components/about/AboutMe';
-import AboutCounter from '@/components/about/AboutCounter';
-import AboutClients from '@/components/about/AboutClients';
-import feather from 'feather-icons';
+import AboutClients from "@/components/about/AboutClients";
+import AboutCounter from "@/components/about/AboutCounter";
+import AboutMe from "@/components/about/AboutMe";
 
 export default {
-	name: 'About',
-	components: {
-		AboutMe,
-		AboutCounter,
-		AboutClients,
-	},
-	data: () => {
-		return {};
-	},
-	mounted() {
-		feather.replace();
-	},
-	updated() {
-		feather.replace();
-	},
-	methods: {},
+    name: "AboutPage",
+    components: {
+        AboutMe,
+        AboutCounter,
+        AboutClients,
+    },
+    data: () => {
+        return {};
+    },
+
+    methods: {},
 };
 </script>
 
 <template>
-	<div>
-		<!-- About me -->
-		<div class="container mx-auto">
-			<AboutMe />
-		</div>
+    <div>
+        <div class="container mx-auto">
+            <AboutMe />
+        </div>
 
-		<!-- About counter -->
-		<AboutCounter />
+        <AboutCounter />
 
-		<!-- About counter -->
-		<div class="container mx-auto">
-			<AboutClients />
-		</div>
-	</div>
+        <!-- About counter -->
+        <div class="container mx-auto">
+            <AboutClients />
+        </div>
+    </div>
 </template>
 
 <style scoped></style>
