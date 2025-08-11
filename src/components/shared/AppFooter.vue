@@ -10,7 +10,7 @@ export default {
                     id: 1,
                     name: "GitHub",
                     icon: "github",
-                    url: "https://github.com/yanbrasiliano",
+                    url: "https://github.com/yanpenalva",
                 },
 
                 {
@@ -29,7 +29,7 @@ export default {
                     id: 4,
                     name: "Linkedin",
                     icon: "linkedin",
-                    url: "https://www.linkedin.com/in/yanbrasiliano/",
+                    url: "https://www.linkedin.com/in/yanpenalva/",
                 },
                 {
                     id: 5,
