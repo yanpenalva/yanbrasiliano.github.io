@@ -4,7 +4,7 @@ import AboutClientSingle from "@/components/about/AboutClientSingle.vue";
 export default {
     components: { AboutClientSingle },
     data: () => ({
-        clientsHeading: "Companies in which I provide or have provided services",
+        heading: "Companies in which I provide or have provided services",
         clients: [
             { id: 1, title: "Ramiro Campelo", img: new URL("@/assets/images/brands/ramiro_logo.png", import.meta.url) },
             { id: 2, title: "ACP Group", img: new URL("@/assets/images/brands/acp_logo.png", import.meta.url) },
@@ -21,22 +21,13 @@ export default {
 </script>
 
 <template>
-    <div class="clients-section">
-        <p class="clients-title">{{ clientsHeading }}</p>
-        <div class="clients-grid">
+    <section class="mt-10 sm:mt-20 text-center">
+        <h2 class="text-2xl sm:text-3xl text-primary-dark dark:text-primary-light font-medium mb-10">
+            {{ heading }}
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center max-w-6xl mx-auto">
             <AboutClientSingle v-for="client in clients" :key="client.id" :client="client" />
         </div>
-    </div>
+    </section>
 </template>
-
-<style scoped>
-.clients-section {
-    @apply mt-10 sm:mt-20;
-}
-.clients-title {
-    @apply text-2xl sm:text-3xl text-primary-dark dark:text-primary-light font-medium text-center;
-}
-.clients-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mt-10 sm:mt-14 place-items-center;
-}
-</style>

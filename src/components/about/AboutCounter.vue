@@ -1,60 +1,38 @@
-<script>
-import counter from 'vue3-autocounter';
-export default {
-	components: {
-		counter,
-	},
-	data: () => {
-		return {
-			experienceTitle: 'Years of experience',
-			projectsTitle: 'Projects completed',
-		};
-	},
-};
+<script setup>
+import Counter from "vue3-autocounter";
+
+const counters = [
+    { end: 6, label: "Years of experience" },
+    { end: 20, label: "Projects completed", showPlus: true },
+];
+
+const onFinished = () => console.info("Counting finished");
 </script>
 
 <template>
-	<div class="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
-		<!-- About me counters -->
-		<div
-			class="font-general-regular container mx-auto py-20 block sm:flex sm:justify-center sm:items-center"
-		>
-			<!-- Years of experience counter -->
-			<div class="mb-20 sm:mb-0 mr-10">
-				<counter
-					ref="counter"
-					:startAmount="0"
-					:endAmount="2"
-					:duration="1"
-					:autoinit="true"
-					@finished="alert(`Counting finished!`)"
-					class="font-general-medium text-4xl font-bold text-secondary-dark dark:text-secondary-light mb-2"
-					aria-label="About Status Counter"
-				/>
-				<span
-					class="block text-md text-ternary-dark dark:text-ternary-light"
-				>
-					{{ experienceTitle }}
-				</span>
-			</div>
-
-			<!-- Projects counter -->
-			<div class="mb-20 sm:mb-0">
-				<counter
-					ref="counter"
-					:startAmount="0"
-					:endAmount="20"
-					:duration="1"
-					:autoinit="true"
-					@finished="alert(`Counting finished!`)"
-					class="font-general-medium text-4xl font-bold text-secondary-dark dark:text-secondary-light mb-2"
-				/> <span class="font-general-medium text-2xl font-bold text-secondary-dark dark:text-secondary-light mb-2">+</span>
-				<span
-					class="block text-md text-ternary-dark dark:text-ternary-light"
-				>
-					{{ projectsTitle }}
-				</span>
-			</div>
-		</div>
-	</div>
+    <section class="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
+        <div
+            class="font-general-regular container mx-auto py-20 flex flex-col sm:flex-row justify-center items-center gap-10"
+        >
+            <div v-for="(item, index) in counters" :key="index" class="text-center">
+                <div class="flex items-center justify-center mb-2">
+                    <Counter
+                        :startAmount="0"
+                        :endAmount="item.end"
+                        :duration="1"
+                        :autoinit="true"
+                        @finished="onFinished"
+                        class="font-general-medium text-4xl font-bold text-secondary-dark dark:text-secondary-light"
+                        aria-label="Animated counter"
+                    />
+                    <span
+                        v-if="item.showPlus"
+                        class="text-2xl font-bold text-secondary-dark dark:text-secondary-light ml-1"
+                        >+</span
+                    >
+                </div>
+                <span class="block text-md text-ternary-dark dark:text-ternary-light">{{ item.label }}</span>
+            </div>
+        </div>
+    </section>
 </template>
