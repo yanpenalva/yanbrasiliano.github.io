@@ -8,11 +8,9 @@ export default {
         AppHeader,
         AppFooter,
     },
-    data: () => {
-        return {
-            appTheme: localStorage.getItem("theme"),
-        };
-    },
+    data: () => ({
+        appTheme: localStorage.getItem("theme"),
+    }),
     mounted() {
         feather.replace();
     },
@@ -24,15 +22,12 @@ export default {
 
 <template>
     <div :class="appTheme" class="pt-0.5">
-        <!-- App header -->
         <AppHeader />
-
-        <!-- Render active component contents with vue transition -->
-        <transition name="fade" mode="out-in">
-            <router-view :theme="appTheme" />
-        </transition>
-
-        <!-- App footer -->
+        <router-view v-slot="{ Component }">
+            <transition name="fade" mode="out-in">
+                <component :is="Component" :theme="appTheme" />
+            </transition>
+        </router-view>
         <AppFooter />
     </div>
 </template>
@@ -59,7 +54,6 @@ export default {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(-10px);
         opacity: 0;
@@ -71,7 +65,6 @@ export default {
         transform: translateX(-10px);
         opacity: 0;
     }
-
     to {
         transform: translateX(0px);
         opacity: 1;

@@ -12,7 +12,6 @@ export default {
         return {
             isOpen: false,
             theme: "",
-            modal: false,
             categories: [
                 { id: 1, value: "web", name: "Web Application" },
                 { id: 2, value: "api", name: "API Application" },
@@ -24,7 +23,6 @@ export default {
     },
     mounted() {
         feather.replace();
-        this.theme = localStorage.getItem("theme") || "light";
     },
     methods: {
         updateTheme(theme) {
@@ -85,7 +83,7 @@ export default {
                 </div>
             </div>
 
-            <AppHeaderLinks :showModal="showModal" :isOpen="isOpen" />
+            <AppHeaderLinks :isOpen="isOpen" />
 
             <div class="hidden sm:flex justify-between items-center flex-col md:flex-row">
                 <ThemeSwitcher
@@ -95,8 +93,6 @@ export default {
                 />
             </div>
         </div>
-
-        <div class="px-4 sm:px-0 mt-4"></div>
     </nav>
 </template>
 

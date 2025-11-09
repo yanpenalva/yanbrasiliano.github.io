@@ -71,7 +71,7 @@ onMounted(() => feather.replace());
                         aria-label="Name"
                     />
                 </div>
-                <ProjectsFilter @filter="selectedCategory = $event" />
+                <ProjectsFilter select="projects" @filter="selectedCategory = $event" />
             </div>
         </div>
 

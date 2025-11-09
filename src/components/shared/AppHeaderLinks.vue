@@ -1,6 +1,6 @@
 <script>
 export default {
-    props: ["showModal", "isOpen"],
+    props: ["isOpen"],
 };
 </script>
 
