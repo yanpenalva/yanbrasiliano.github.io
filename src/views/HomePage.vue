@@ -1,17 +1,17 @@
 <script>
-import ProjectsGrid from "@/components/projects/ProjectsGrid.vue";
+import AppBanner from "@/components/shared/AppBanner";
 
 export default {
-    name: "Projects",
+    name: "HomePage",
     components: {
-        ProjectsGrid,
+        AppBanner,
     },
 };
 </script>
 
 <template>
     <div class="container mx-auto">
-        <ProjectsGrid />
+        <AppBanner class="mb-5 sm:mb-8" />
     </div>
 </template>
 

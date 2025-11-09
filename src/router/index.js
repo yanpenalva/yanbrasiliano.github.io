@@ -1,11 +1,11 @@
-import Home from "@/views/Home.vue";
+import HomePage from "@/views/HomePage.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
     {
         path: "/",
         name: "Home",
-        component: Home,
+        component: HomePage,
         meta: { title: "Home" },
     },
     {
@@ -17,7 +17,7 @@ const routes = [
     {
         path: "/projects",
         name: "Projects",
-        component: () => import("../views/Projects.vue"),
+        component: () => import("../views/ProjectSection.vue"),
         meta: { title: "Projects" },
     },
     {
@@ -25,6 +25,11 @@ const routes = [
         name: "Contact",
         component: () => import("../views/Contact.vue"),
         meta: { title: "Contact" },
+    },
+    {
+        path: "/business-projects",
+        name: "BusinessProjects",
+        component: () => import("@/views/BusinessProjects.vue"),
     },
 ];
 

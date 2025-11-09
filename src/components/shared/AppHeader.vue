@@ -1,14 +1,12 @@
 <script>
-import feather from "feather-icons";
-import Button from "@/components/reusable/Button.vue";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import AppHeaderLinks from "@/components/shared/AppHeaderLinks.vue";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import feather from "feather-icons";
 
 export default {
     components: {
         ThemeSwitcher,
         AppHeaderLinks,
-        Button,
     },
     data() {
         return {
@@ -16,20 +14,11 @@ export default {
             theme: "",
             modal: false,
             categories: [
-                {
-                    id: 1,
-                    value: "web",
-                    name: "Web Application",
-                },
-                {
-                    id: 2,
-                    value: "api",
-                    name: "API Application",
-                },
+                { id: 1, value: "web", name: "Web Application" },
+                { id: 2, value: "api", name: "API Application" },
             ],
         };
     },
-
     created() {
         this.theme = localStorage.getItem("theme") || "light";
     },
@@ -50,15 +39,11 @@ export default {
 
 <template>
     <nav id="nav" class="sm:container sm:mx-auto">
-        <!-- Header start -->
         <div class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6">
-            <!-- Header menu links and small screen hamburger menu -->
             <div class="flex justify-between items-center px-4 sm:px-0">
-                <!-- Header logos -->
                 <div>
                     <router-link to="/">
                         <a
-                            href="#_"
                             class="font-general-medium block text-left text-2xl font-medium text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
                         >
                             Home
@@ -66,14 +51,12 @@ export default {
                     </router-link>
                 </div>
 
-                <!-- Theme switcher small screen -->
-                <theme-switcher
+                <ThemeSwitcher
                     :theme="theme"
                     @themeChanged="updateTheme"
                     class="block sm:hidden bg-ternary-light dark:bg-ternary-dark hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 rounded-lg"
                 />
 
-                <!-- Small screen hamburger menu -->
                 <div class="sm:hidden">
                     <button
                         @click="isOpen = !isOpen"
@@ -93,7 +76,7 @@ export default {
                                 clip-rule="evenodd"
                             ></path>
                             <path
-                                v-if="!isOpen"
+                                v-else
                                 fill-rule="evenodd"
                                 d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
                             ></path>
@@ -102,19 +85,18 @@ export default {
                 </div>
             </div>
 
-            <!-- Header links -->
             <AppHeaderLinks :showModal="showModal" :isOpen="isOpen" />
 
-            <!-- Header right section buttons -->
             <div class="hidden sm:flex justify-between items-center flex-col md:flex-row">
-                <!-- Theme switcher large screen -->
-                <theme-switcher
+                <ThemeSwitcher
                     :theme="theme"
                     @themeChanged="updateTheme"
                     class="ml-8 bg-primary-light dark:bg-ternary-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
                 />
             </div>
         </div>
+
+        <div class="px-4 sm:px-0 mt-4"></div>
     </nav>
 </template>
 
